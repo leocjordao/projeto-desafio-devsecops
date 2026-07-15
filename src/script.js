@@ -1,4 +1,3 @@
-
 // Busca tarefas do "banco de dados"
 fetch('db.json')
     .then(response => response.json())
