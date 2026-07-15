@@ -22,9 +22,13 @@ function addTask() {
     const input = document.getElementById('new-task');
     const output = document.getElementById('output');
 
-    output.innerHTML = '<li>' + input.value + '</li>';
+    if (input.value.trim() === '') return;
 
-    eval('console.log("Tarefa adicionada: ' + input.value + '")');
+    const li = document.createElement('li');
+    li.textContent = input.value;
+    output.appendChild(li);
+
+    console.log("Tarefa adicionada", input.value);
 
     input.value = '';
 }
